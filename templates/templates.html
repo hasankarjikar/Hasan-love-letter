@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>From Hasan 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #fffafc);
+      font-family: 'Fredoka One', cursive;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff4081;
+      text-shadow: 2px 2px #fff;
+    }
+
+    p {
+      font-size: 1.4em;
+      color: #555;
+      margin: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      background: #ff4081;
+      border: none;
+      border-radius: 15px;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #e91e63;
+    }
+
+    #final {
+      display: none;
+      font-size: 2em;
+      margin-top: 20px;
+      color: #e91e63;
+    }
+
+    .heart {
+      width: 20px;
+      height: 20px;
+      background: red;
+      position: fixed;
+      top: 100%;
+      animation: float 6s infinite;
+      transform: rotate(45deg);
+    }
+
+    .heart::before, .heart::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before { top: -10px; left: 0; }
+    .heart::after  { top: 0; left: -10px; }
+
+    @keyframes float {
+      0% { top: 100%; opacity: 1; }
+      100% { top: -10%; opacity: 0; }
+    }
+
+    .gif {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hi, My Special One 💖</h1>
+  <p>I’ve been meaning to say something for a while...</p>
+  <button onclick="propose()">Click to Reveal 💌</button>
+  <div id="final">Will you be mine forever?
